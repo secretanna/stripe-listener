@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_10_19_074508) do
-  create_table "subscriptions", force: :cascade do |t|
-    t.string "idx"
-    t.string "status", null: false
-    t.text "original_payload"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+ActiveRecord::Schema[7.0].define(version: 20_241_019_074_508) do
+  create_table 'subscriptions', force: :cascade do |t|
+    t.string 'idx'
+    t.string 'status', null: false
+    t.text 'original_payload'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
-
 end

@@ -1,0 +1,21 @@
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'bin/**/*'
+    - 'Gemfile'
+  NewCops: enable
+
+Layout/LineLength:
+  Max: 160
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false  
