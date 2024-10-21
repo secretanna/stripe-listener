@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple event listener from Stripe webhooks. 
 
-Things you may want to cover:
+To run the aplication just execute 
+```
+rails s
+```
+It will start it on port 3000.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To test the webhooks you need your own account on Stripe, sorry, I don't share my credentials 😉. Just update rails credentials with your owrn secret_key and , executing this command
+```
+EDITOR=vi rails credentials:edit
+```
