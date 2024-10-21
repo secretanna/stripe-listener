@@ -7,7 +7,7 @@ class Subscription < ApplicationRecord
     end
 
     event :cancel do
-      transition paid: :cancel
+      transition paid: :canceled
     end
   end
 end

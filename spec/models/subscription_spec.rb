@@ -22,7 +22,7 @@ RSpec.describe Subscription, type: :model do
 
       it 'transitions to cancelled when cancel event is called' do
         subscription.cancel
-        expect(subscription.status).to eq('cancel')
+        expect(subscription.status).to eq('canceled')
       end
 
       it 'does not transition to unpaid' do

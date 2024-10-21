@@ -5,4 +5,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  namespace :webhooks do
+    scope module: 'stripe', path: '/stripe', as: :stripe do
+      post 'events', to: 'event#handle'
+    end
+  end
 end
