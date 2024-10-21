@@ -29,7 +29,10 @@ module Integrations
     end
 
     def invoice_payment_succeeded
-      Subscription.find_by!(idx: @event.data.object.subscription).pay!
+      subscription = Subscription.find_by!(idx: @event.data.object.subscription)
+      return if subscription.paid?
+      
+      subscription.pay!
       Rails.logger.info 'Subscription was paid'
     end
   end
